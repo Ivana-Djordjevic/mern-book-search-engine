@@ -12,7 +12,7 @@ module.exports = {
     // allows token to be sent via  req.query or headers
     let token = req.query.token || req.headers.authorization;
 
-    console.log(token)
+    console.log('token', token)
     // ["Bearer", "<tokenvalue>"]
     if (req.headers.authorization) {
       token = token.split(' ').pop().trim();
@@ -27,7 +27,7 @@ module.exports = {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;
     } catch {
-      console.log('Invalid token');
+      console.log('Invalid token! authmiddleware failed somewhere');
       return req;
     }
 
