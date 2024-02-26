@@ -22,26 +22,22 @@ const typeDefs = `
         user: User
     }
 
-    input BookData {
-        _id: ID!
-        authors: [String]
-        description: String!
-        bookId: String!
-        image: String
-        link: String
-        title: String!
-    }
-
     type Query {
         me: User
     }
 
     type Mutation {
-        createUser(username: String, email: String, password: String): Auth
-        login(email: String, password: String): Auth
-        saveBook(book: Bookdata): User
+        createUser(username: String!, email: String!, password: String!): Auth
+        login(email: String!, password: String!): Auth
+        saveBook(
+            authors: [String],
+            description: String!,
+            bookId: String!,
+            image: String,
+            link: String,
+            title: String!): User
         deleteBook(bookId: ID!): User
     }
-`
+`;
 
 module.exports = typeDefs;
