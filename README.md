@@ -19,10 +19,13 @@ This application facilitates book search functionality, allowing users to browse
 Screenshots: 
 
 Login:
+![login-page](https://github.com/Ivana-Djordjevic/mern-book-search-engine/assets/127266659/06f35508-b607-4f7a-bf0a-20664336df67)
 
 Search Books:
+![search-books](https://github.com/Ivana-Djordjevic/mern-book-search-engine/assets/127266659/8e200f3e-1a20-4d87-9c7f-2dbdb0697e66)
 
 Saved Books:
+![saved-books](https://github.com/Ivana-Djordjevic/mern-book-search-engine/assets/127266659/35297e4d-8951-4cf0-a7c9-a9567648189b)
 
 [deployed Render link](https://mern-book-search-enginesss.onrender.com/)
 
