@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Container, Card, Button, Row, Col } from 'react-bootstrap';
 
-// import { deleteBook } from '../utils/API';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 
@@ -21,12 +20,10 @@ const SavedBooks = () => {
     
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
-
     try {
       const { data } = await deleteBook({
         variables: {bookId}
       });
-
 
       // upon success, remove book's id from localStorage
       removeBookId(bookId);
